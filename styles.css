@@ -1,0 +1,187 @@
+/*  Fonts
+-----
+font-family: 'Lora', serif;
+font-family: 'Ubuntu', sans-serif;
+*/
+
+body {
+  margin: 0;
+  font-family: "Ubuntu", sans-serif;
+}
+
+/* =================
+Typography
+================= */
+
+h1 {
+  font-family: "Lora", serif;
+  font-weight: 400;
+  color: #143774;
+  font-size: 2rem;
+  margin: 0;
+}
+
+.subtitle {
+  font-weight: 700;
+  color: #1792d2;
+  font-size: 0.75rem;
+  margin: 0;
+}
+
+/* =================
+Layout
+================= */
+
+.container {
+  width: 90%;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.container-nav {
+  display: flex;
+  justify-content: space-between;
+}
+
+header {
+  background: #f8f8f8;
+  padding: 2em 0;
+}
+
+@media (max-width: 675px) {
+  .container-nav {
+    flex-direction: column;
+  }
+
+  header {
+    text-align: center;
+  }
+}
+
+/* navigation */
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+
+nav li {
+  margin-left: 2em;
+}
+
+nav a {
+  text-decoration: none;
+  color: #707070;
+  font-weight: 700;
+  padding: 0.25em 0;
+}
+
+nav a:hover,
+nav a:focus {
+  color: #1792d2;
+}
+
+.current-page {
+  border-bottom: 1px solid #707070;
+}
+
+.current-page:hover {
+  color: #707070;
+}
+
+@media (max-width: 675px) {
+  nav ul {
+    flex-direction: column;
+  }
+
+  nav li {
+    margin: 0.5em 0;
+  }
+}
+
+/* =================
+MAIN 
+================= */
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 2rem;
+}
+
+main {
+  width: 70%;
+  font-family: "Ubuntu", sans-serif;
+  color: #707070;
+}
+main h2 {
+  font-family: "Lora", serif;
+  color: #143774;
+  font-size: 1.5rem;
+  font-weight: normal;
+  letter-spacing: 0.08rem;
+  color: #143774;
+}
+
+main p {
+  font-size: 1.125rem;
+  font-weight: 300;
+  letter-spacing: 0.03rem;
+}
+
+main span {
+  font-weight: bold;
+}
+
+.date {
+  font-family: "Segoe UI", Arial, sans-serif;
+  font-size: 0.85rem;
+  color: #707070;
+}
+.continue--reading {
+  text-transform: uppercase;
+  color: #1792d2;
+  font-size: 0.875rem;
+  font-weight: bold;
+  letter-spacing: 0.3rem;
+}
+
+aside {
+  width: 25%;
+  font-family: "Ubuntu", sans-serif;
+}
+aside h3 {
+  text-transform: uppercase;
+  font-size: 1.125rem;
+  letter-spacing: 0.4rem;
+}
+
+aside p {
+  font-weight: 400;
+  font-size: 0.875rem;
+}
+
+main img {
+  width: 100%;
+}
+
+aside img {
+  width: 100%;
+}
+
+footer {
+  font-family: "Ubuntu", sans-serif;
+  height: 10rem;
+  background-color: #143774;
+
+  text-align: center;
+}
+
+footer p {
+  margin: 0;
+  color: #ffffff;
+  opacity: 54%;
+  font-weight: 300;
+}
