@@ -148,6 +148,32 @@ main span {
   letter-spacing: 0.3rem;
 }
 
+.small--image {
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid magenta;
+}
+
+.article-main {
+  width: 70%;
+  border: 1px solid green;
+}
+
+.image--date {
+  width: 30%;
+  border: 1px solid blue;
+}
+
+.image--date img {
+  min-height: 250px;
+  object-fit: cover;
+  order: -2;
+}
+
+.image--date p {
+  order: -1;
+}
+
 aside {
   width: 25%;
   font-family: "Ubuntu", sans-serif;
