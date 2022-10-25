@@ -7,6 +7,8 @@ font-family: 'Ubuntu', sans-serif;
 body {
   margin: 0;
   font-family: "Ubuntu", sans-serif;
+  font-size: 1.125rem;
+  font-weight: 300;
 }
 
 /* =================
@@ -15,7 +17,7 @@ Typography
 
 h1 {
   font-family: "Lora", serif;
-  font-weight: 400;
+  font-weight: 600;
   color: #143774;
   font-size: 2rem;
   margin: 0;
@@ -26,6 +28,8 @@ h1 {
   color: #1792d2;
   font-size: 0.75rem;
   margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
 }
 
 /* =================
@@ -76,6 +80,7 @@ nav a {
   color: #707070;
   font-weight: 700;
   padding: 0.25em 0;
+  text-transform: uppercase;
 }
 
 nav a:hover,
@@ -108,7 +113,7 @@ MAIN
 .container {
   display: flex;
   justify-content: space-between;
-  margin-top: 2rem;
+  margin-top: 2em;
 }
 
 main {
@@ -119,20 +124,27 @@ main {
 main h2 {
   font-family: "Lora", serif;
   color: #143774;
-  font-size: 1.5rem;
+  font-size: 1.5em;
   font-weight: normal;
   letter-spacing: 0.08rem;
   color: #143774;
 }
 
 main p {
-  font-size: 1.125rem;
+  font-size: 1.125em;
   font-weight: 300;
-  letter-spacing: 0.03rem;
+
+  line-height: 1.3em;
 }
 
 main span {
   font-weight: bold;
+}
+
+.main img {
+  max-height: 300px;
+  object-fit: cover;
+  object-position: bottom;
 }
 
 .date {
@@ -147,21 +159,37 @@ main span {
   font-weight: bold;
   letter-spacing: 0.3rem;
 }
+@media (max-width: 675px) {
+  .container {
+    flex-direction: column;
+    justify-content: center;
+  }
+  main {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+}
 
 .small--image {
   display: flex;
   justify-content: space-between;
-  border: 1px solid magenta;
+  margin-bottom: 1.5rem;
+}
+
+.small--image img {
+  object-fit: cover;
 }
 
 .article-main {
-  width: 70%;
-  border: 1px solid green;
+  width: 67%;
+}
+.article-main h2 {
+  margin-top: 0;
 }
 
 .image--date {
   width: 30%;
-  border: 1px solid blue;
 }
 
 .image--date img {
@@ -174,19 +202,90 @@ main span {
   order: -1;
 }
 
+@media (max-width: 675px) {
+  .article-main {
+    width: 100%;
+  }
+  .main .continue--reading {
+    margin-bottom: 2em;
+  }
+  .small--image {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 2em;
+  }
+
+  .image--date {
+    width: 100%;
+    /* margin-bottom: 2em; */
+  }
+
+  .image--date img {
+    max-height: 280px;
+    object-fit: cover;
+    object-position: bottom;
+  }
+  .image--date:first-child {
+    margin-top: 2em;
+  }
+
+  .date {
+    pos
+  }
+}
+
+/* =================
+SIDEBAR 
+================= */
+
 aside {
   width: 25%;
-  font-family: "Ubuntu", sans-serif;
 }
+
+.sidebar {
+  border: 20px solid #efefef;
+  margin-bottom: 2em;
+  padding: 1em;
+  padding-top: 0;
+}
+
+.sidebar hr {
+  margin-bottom: 1em;
+}
+
+.sidebar p {
+  font-size: 0.875em;
+  font-weight: 300;
+  color: #143774;
+  line-height: 1.5em;
+}
+
+.recent--posts {
+  display: flex;
+  flex-direction: column;
+}
+
 aside h3 {
   text-transform: uppercase;
   font-size: 1.125rem;
-  letter-spacing: 0.4rem;
+  letter-spacing: 0.2em;
+  color: #143774;
+}
+
+aside h4 {
+  font-size: 1em;
+  color: #143774;
+  font-weight: 300;
+  line-height: 1.2em;
+  margin-top:0.5em;
+  margin-bottom: 1em;
 }
 
 aside p {
   font-weight: 400;
   font-size: 0.875rem;
+  margin-top: 1.4em;
+  line-height: 1.5em;
 }
 
 main img {
@@ -197,11 +296,27 @@ aside img {
   width: 100%;
 }
 
-footer {
-  font-family: "Ubuntu", sans-serif;
-  height: 10rem;
-  background-color: #143774;
+@media (max-width: 675px) {
+  aside {
+    width: 100%;
+  }
+  aside img {
+    object-fit: cover;
+    max-height: 90px;
+  }
+  .first--image {
+    max-height: 140px;
+    object-fit: cover;
+  }
+}
 
+/* =================
+FOOTER
+================= */
+
+footer {
+  background-color: #143774;
+  padding: 3em 0;
   text-align: center;
 }
 
